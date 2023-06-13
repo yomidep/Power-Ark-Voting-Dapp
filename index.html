@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting-Dapps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="/img/arkade.jpg" alt="">
+            <h1>PowerArk</h1>
+        </div>
+        
+        <button id="Connect">Connect Wallet</button>
+    </nav>
+    <div class="header">
+        <p class="header-paragraph">
+            PowerArk Voting DApp is a cutting-edge decentralized application (DApp) designed to revolutionize the way decisions are made within the PowerArk ecosystem. Built on the principles of transparency, inclusivity, and decentralization, our platform empowers participants to actively engage in the decision-making process.
+        </p>
+    </div>
+    <div class="card-container" >
+        <div class="card" data-aos="fade-right">
+            <h2 class="card-header"> Operational Expenses</h2>
+            <img src="img/operation.jpeg" alt="" class="card-img">
+            <p class="card-info">Operational Expenses play a critical role in the day-to-day
+                functioning of our organization. Voting on Operational Expenses
+                proposals enables members to make decisions regarding the allocation
+                of resources for essential activities such as infrastructure,
+                staffing, and logistical needs. These decisions directly impact our
+                operational efficiency and sustainability.</p>
+        </div>
+        <div class="card"  data-aos="fade-left">
+            <h2 class="card-header"> Research Projects</h2>
+            <img src="img/research.jpeg" alt="" class="card-img">
+            <p class="card-info">With Research Projects, we aim to foster innovation and explore new
+                frontiers. Members can vote on proposals that focus on
+                groundbreaking research initiatives, seeking to push the boundaries
+                of knowledge in our industry. By supporting Research Projects, we
+                invest in the future and nurture a culture of discovery within our
+                organization..</p>
+        </div>
+        <div class="card"  data-aos="fade-right">
+            <h2 class="card-header"> GameFi</h2>
+            <img src="img/gamefi.jpg" alt="" class="card-img">
+            <p class="card-info">The objective of this voting proposal is to implement a robust governance mechanism that enables GameFi participants to vote on critical decisions, such as game features, tokenomics, partnerships, and development roadmap. By providing a platform for the community to voice their opinions and influence the direction of GameFi projects, we can foster a sense of ownership, inclusivity, and accountability within the ecosystem.</p>
+        </div>
+        <div class="card"  data-aos="fade-left">
+            <h2 class="card-header"> Crypto Education</h2>
+            <img src="img/web3.jpg" alt="" class="card-img">
+            <p class="card-info">The Crypto Education proposal aims to enhance our members' knowledge
+                and understanding of cryptocurrency and blockchain technology. By
+                voting for this proposal, you contribute to the growth of our
+                community's expertise and pave the way for widespread adoption and
+                innovation in the crypto space.</p>
+        </div>
+        <div class="card"  data-aos="fade-right">
+            <h2 class="card-header"> Hackathon Proposal</h2>
+            <img src="img/hackathon.jpg" alt="" class="card-img">
+            <p class="card-info">The Hackathon proposal aims to organize an exciting and collaborative
+                event where our community members can showcase their skills and
+                creativity. By voting for this proposal, you encourage innovation,
+                collaboration, and the development of cutting-edge solutions within
+                our organization.</p>
+        </div>
+        <div class="card"  data-aos="fade-left">
+            <h2 class="card-header"> Governance Token</h2>
+            <img src="img/etheruem.jpg" alt="" class="card-img">
+            <p class="card-info">Governance Token aims to provide a decentralized governance platform for
+            our community. By voting for this proposal, you actively participate
+            in shaping the future of our organization. You can influence
+            decisions, vote on important matters, and contribute to the overall
+            governance structure of our community.</p>
+        </div>
+    </div>
+    <div class="vote-options">
+            <label for="proposal">Choose a Proposal</label>
+            <select id="proposal" name="proposal">
+            <option value="Operational Expenses">Operational Expenses</option>
+            <option value="Research Projects">Research Projects</option>
+            <option value="GameFi">GameFi</option>
+            <option value="Crypto Education">Crypto Education</option>
+            <option value="Hackathon Proposal">Hackathon Proposal</option>
+            <option value="Governance Token">Governance Token</option>
+            </select>
+            <input type="submit" value="Vote" id="vote">
+    </div>
+    <footer>
+         <button class="result" id="Result">Check result</button>
+    </footer>
+<script src="main.js" type="module"></script>
+</body>
+</html>
