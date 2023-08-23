@@ -9,9 +9,10 @@
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
-        type="application/javascript"></script>
-
+    <script
+  src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+  type="application/javascript">
+</script>
 </head>
 <body>
     <nav>
@@ -20,7 +21,7 @@
             <h1>PowerArk</h1>
         </div>
         
-        <button id="Connect">Connect Wallet</button>
+        <button onclick={handleConnectMetamask()}>Connect Wallet</button>
     </nav>
     <div class="header">
         <p class="header-paragraph">
@@ -81,21 +82,21 @@
             governance structure of our community.</p>
         </div>
     </div>
-    <div class="vote-options">
+    <form class="vote-options" onsubmit={voteCandidate()}>
             <label for="proposal">Choose a Proposal</label>
-            <select id="proposal" name="proposal">
-            <option value="Operational Expenses">Operational Expenses</option>
-            <option value="Research Projects">Research Projects</option>
-            <option value="GameFi">GameFi</option>
-            <option value="Crypto Education">Crypto Education</option>
-            <option value="Hackathon Proposal">Hackathon Proposal</option>
-            <option value="Governance Token">Governance Token</option>
+            <select id="proposal" name="proposal" onchange={handleInput()}>
+            <option value="OperationalExp">Operational Expenses</option>
+            <option value="ResearchPro">Research Projects</option>
+            <option value="Gamefi">GameFi</option>
+            <option value="CryptoEdu">Crypto Education</option>
+            <option value="Hackathon">Hackathon Proposal</option>
+            <option value="GovernanceTok">Governance Token</option>
             </select>
-            <input type="submit" value="Vote" id="vote">
-    </div>
+            <input type="submit" value="Vote">
+        </form>
     <footer>
-         <button class="result" id="Result">Check result</button>
+        <button class="result"  onClick={winningCandidate}>Check Election result</button>
     </footer>
-<script src="main.js" type="module"></script>
+<script src="main.js"></script>
 </body>
 </html>
