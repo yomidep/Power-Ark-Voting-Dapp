@@ -18,6 +18,8 @@ function useState(defaultValue) {
    const [connected, setConnected] = useState(false);
    const [address, setAddress] = useState("");
  
+   const connectButton = document.getElementById('connectButton');
+
    // a function to connect wallet
    const handleConnectMetamask = async () => {
      // used the try block just so i can catch errors easily
@@ -49,6 +51,9 @@ function useState(defaultValue) {
        const address = await signer.getAddress();
        // use the slice method to truncate address
        const truncatedAddress = address.slice(0, 4) + ".." + address.slice(-2);
+
+       connectButton.textContent = `Connected: ${truncatedAddress}`;
+       
        // set signer
        setConnected(signer);
        // set connected address
@@ -133,3 +138,4 @@ function useState(defaultValue) {
     document.getElementById("winningButton").addEventListener("click", winningCandidate);
 
 }
+
